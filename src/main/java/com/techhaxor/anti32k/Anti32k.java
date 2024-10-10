@@ -38,9 +38,7 @@ public final class Anti32k extends JavaPlugin implements Listener {
             Inventory i = ih.getInventory();
             for(ItemStack is : i ){
                 if (is != null && is.getType() != Material.AIR){
-                    if(is.getAmount() > is.getMaxStackSize()){
-                        is.setAmount(is.getMaxStackSize());
-                    }
+                    //if(is.getAmount() > is.getMaxStackSize()){is.setAmount(is.getMaxStackSize());} //commended out so that it no longer fix illegal stacks.
                     fixEnchantments(is);
                 }
             }
